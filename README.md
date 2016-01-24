@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>VDJ Puzzle</h1>
 
 VDJ Puzzle [<a href="#Ref1">1</a>] is a method to build T-Cell Receptor and B-Cell Receptor assembly from single cell RNA sequencing data.
@@ -70,6 +69,3 @@ or by email ( s.rizzetto at student.unsw.edu.au )
 <h2>Cite us</h2>
 VDJPuzzle paper is currently under review. In the meantime you can cite VDJPuzzle with <br>
 [<a name="Ref1">1</a>] Auda Eltahla\*, Simone Rizzetto\*, Mehdi Rasoli\*, Brigid Betz-Stablein, Vanessa Venturi, Andrew R Lloyd, Katherine Kedzierska, Rowena A Bull and Fabio Luciani. (Date of download). VDJPuzzle. Downloaded from https://github.com/Simo-88/VDJPuzzle
-=======
-# VDJPuzzle
->>>>>>> 7ce1ad71e893b3b924cc27bf6c729e4a1ae2a6df
