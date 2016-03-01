@@ -67,5 +67,4 @@ You can post any question or issue to our <a href="https://groups.google.com/for
 or by email ( s.rizzetto at student.unsw.edu.au )
 
 <h2>Cite us</h2>
-VDJPuzzle paper is currently under review. In the meantime you can cite VDJPuzzle with <br>
-[<a name="Ref1">1</a>] Auda Eltahla\*, Simone Rizzetto\*, Mehdi Rasoli\*, Brigid Betz-Stablein, Vanessa Venturi, Andrew R Lloyd, Katherine Kedzierska, Rowena A Bull and Fabio Luciani. (Date of download). VDJPuzzle. Downloaded from https://github.com/Simo-88/VDJPuzzle
+[<a name="Ref1">1</a>] Auda Eltahla\*, Simone Rizzetto\*, Mehdi Rasoli\*, Brigid Betz-Stablein, Vanessa Venturi, Katherine Kedzierska, Andrew R Lloyd, Rowena A Bull and Fabio Luciani. Linking the T cell receptor to the single cell transcriptome in antigen-specific human T cells. Immunology and cell biology, 2016, doi: 10.1038/icb.2016.16

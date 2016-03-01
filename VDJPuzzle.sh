@@ -41,7 +41,7 @@ do
 	esac
 done
 
-if [ "$PARALLEL" -g 1 ]; then
+if [ "$PARALLEL" -gt 1 ]; then
 	echo "Running VDJ Puzzle in parallel mode with $PARALLEL processes."
 else
 	echo "Running VDJ Puzzle with a single process."
@@ -51,7 +51,7 @@ fi
 CURDIR=$PWD
 cd $RNADIR
 RNADIR=$PWD
-cd $PWD
+cd $CURDIR
 
 #PART1 - GENERATE PRELIMINARY VDJ REPERTOIRE
 for d in $RNADIR/*
@@ -72,8 +72,11 @@ do
 		else
 		    echo "$DIR contains less than two files."
 		fi
-		if [ "$PARALLEL" -g 1 ]; then
-			for np in { 1..$PARALLEL }; do ./run_tcr_method2_sc_1file.sh $di $filename & ; done
+		if [ "$PARALLEL" -gt 1 ]; then
+			for np in { 1..$PARALLEL } 
+			do 
+				./run_tcr_method2_sc_1file.sh $di $filename &
+			done
 			wait
 		else
 			./run_tcr_method2_sc_1file.sh $di $filename
@@ -111,8 +114,11 @@ do
 		else
 		    echo "$DIR contains less than two files."
 		fi
-		if [ "$PARALLEL" -g 1 ]; then
-			for np in { 1..$PARALLEL }; do ./run_tcr_method2_sc_part2.sh $di $filename & ; done
+		if [ "$PARALLEL" -gt 1 ]; then
+			for np in { 1..$PARALLEL }
+			do 
+				./run_tcr_method2_sc_part2.sh $di $filename &
+			done
 			wait
 		else
 			./run_tcr_method2_sc_part2.sh $di $filename
@@ -143,8 +149,11 @@ do
 		else
 		    echo "$DIR contains less than two files."
 		fi
-		if [ "$PARALLEL" -g 1 ]; then
-			for np in { 1..$PARALLEL }; do ./run_tcr_method2_sc_1file_part3.sh $di $filename & ; done
+		if [ "$PARALLEL" -gt 1 ]; then
+			for np in { 1..$PARALLEL }
+			do 
+				./run_tcr_method2_sc_1file_part3.sh $di $filename &
+			done
 			wait
 		else
 			./run_tcr_method2_sc_1file_part3.sh $di $filename
@@ -214,7 +223,6 @@ if [ "$RUNR" -ge 1 ]; then
 	rm summary/single_cells_TRB.txt
 	rm summary/single_cells_ID_TRA.txt
 	rm summary/single_cells_ID_TRB.txt
-	Rscript tcr_analysis.R summary/single_cells_TRA.txt summary/single_cells_TRB.txt
 fi
 
 echo "TCR identification completed! Check your results in the summary directory."
