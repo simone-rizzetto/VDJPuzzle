@@ -1,10 +1,8 @@
 #!/bin/bash
-#This script needs tophat2, samtools, intersectBed and trinity in /usr/bin/
-#Requires the fasta converter script provided with VDJSeq-Solver (http://eda.polito.it/VDJSeq-Solver/index.html)
+#This script requries tophat2, samtools, intersectBed and trinity in /usr/bin/
 #Execution: ./Method2.sh reads1.fq reads2.fq TCRA_C.bed TCRB_C.bed out_dir
 #Do NOT add / after out_dir when you call Method2.sh
 
-PATHCONVERTER=/home/simone/Tools/VDJSeq-Solver_TCR_test/SCRIPTS
 trinitypath=/home/simone/Tools/trinityrnaseq-2.0.6/Trinity
 TOPHAT=tophat2
 
@@ -31,7 +29,6 @@ $TOPHAT -r 210 --mate-std-dev 30 -m 2 --solexa-quals -o $5/out/tophat_run -p 8 /
 #====== TRB only BEGIN =========
 intersectBed -wa -abam $5/out/tophat_run/accepted_hits.bam -b $4 > $5/out/tophat_run/overlapping_reads.bam 
 samtools view -h -o $5/out/tophat_run/overlapping_reads.sam $5/out/tophat_run/overlapping_reads.bam
-#java -jar $PATHCONVERTER/FASTACONVERTER.jar -g $5/out/tophat_run/overlapping_reads.sam -i $5/overlapping_reads.fa
 cat $5/out/tophat_run/overlapping_reads.sam | grep -v ^@ | awk '{print "@"$1"\n"$10"\n+\n"$11}' > $5/overlapping_reads.fq
 cat $5/overlapping_reads.fq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > $5/overlapping_reads.fa
 
@@ -51,7 +48,6 @@ rm $5/overlapping_reads*
 #====== TRA only BEGIN =========
 intersectBed -wa -abam $5/out/tophat_run/accepted_hits.bam -b $3 > $5/out/tophat_run/overlapping_reads.bam 
 samtools view -h -o $5/out/tophat_run/overlapping_reads.sam $5/out/tophat_run/overlapping_reads.bam
-#java -jar $PATHCONVERTER/FASTACONVERTER.jar -g $5/out/tophat_run/overlapping_reads.sam -i $5/overlapping_reads.fa
 cat $5/out/tophat_run/overlapping_reads.sam | grep -v ^@ | awk '{print "@"$1"\n"$10"\n+\n"$11}' > $5/overlapping_reads.fq
 cat $5/overlapping_reads.fq | awk 'NR%4==1{printf ">%s\n", substr($0,2)}NR%4==2{print}' > $5/overlapping_reads.fa
 

@@ -6,13 +6,6 @@
 #parameter one need to be the ABSOLUTE path where cell sequences are located WITHOUT /
 CELL_PATH=$1
 
-PREFIX=$2
-SUFFIX=P.fastq.gz
-R1=_R1_001
-R2=_R2_001
-
-TCRA=BED_files/TRAC.bed
-TCRB=BED_files/TRBC.bed
 MIGMAP=/home/simone/Tools/migmap-0.9.7/migmap-0.9.7.jar
 JAVA18=java1.8/bin/java
 

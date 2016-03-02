@@ -4,7 +4,6 @@
 #Execution: ./Method2.sh reads1.fq reads2.fq TCRA_C.bed TCRB_C.bed out_dir
 #Do NOT add / after out_dir when you call Method2.sh
 
-PATHCONVERTER=/home/simone/Tools/VDJSeq-Solver_TCR_test/SCRIPTS
 trinitypath=/home/simone/Tools/trinityrnaseq-2.0.6/Trinity
 TOPHAT=tophat2
 

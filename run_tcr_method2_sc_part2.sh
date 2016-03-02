@@ -1,5 +1,5 @@
 #!/bin/bash
-#This script execut the RNA-Seq alingnamet pipeline sequentially, multithreading is implemented within the scripts (Trimmomatic, tophat and cufflinks)
+#This script execut the RNA-Seq alingnamet pipeline sequentially, multithreading is implemented within the scripts (tophat and cufflinks)
 #This script should be executed in parallel on different cells indicating the right directory ($1)
 
 #parameters

@@ -128,7 +128,11 @@ done
 
 wait
 
+bowtie2-build -f all_sequences_a.fa TCRA
+bowtie2-build -f all_sequences_b.fa TCRB
 
+mkdir assembledTCR_genome
+mv *.bt2 assembledTCR_genome/
 
 #PART3 - 
 for d in $RNADIR/*

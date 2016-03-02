@@ -25,8 +25,8 @@ cat $CELL_PATH/*$R2* > $CELL_PATH/merged_R2.fastq
 ./Method2.sh $CELL_PATH/merged_R1.fastq $CELL_PATH/merged_R2.fastq $TCRA $TCRB VDJ_p1_$2
 
 mkdir summary
-$JAVA18 -jar $MIGMAP -S human -R TRA -S human VDJreads_$2/tcr_a.fa summary/TRA_$2
-$JAVA18 -jar $MIGMAP -S human -R TRB -S human VDJreads_$2/tcr_b.fa summary/TRB_$2
+$JAVA18 -jar $MIGMAP -S human -R TRA -S human VDJ_p1_$2/tcr_a.fa summary/TRA_$2
+$JAVA18 -jar $MIGMAP -S human -R TRB -S human VDJ_p1_$2/tcr_b.fa summary/TRB_$2
 
 rm $CELL_PATH/merged*
 gzip $CELL_PATH/*.fastq

@@ -7,7 +7,7 @@ VDJ Puzzle requires the following tools:
 <ul>
 <li><a href="">TopHat2</a> for alignament;</li>
 <li><a href="">Trinity2</a> for denovo assembly of TCR;</li>
-<li><a href="">Ensembl GHRC37</a> as refernce genome, but it can be easily adapted to other reference genomes (<a href="#generateBED">here</a> it is explained how);</li>
+<li><a href="">Ensembl GRCh37</a> as refernce genome, but it can be easily adapted to other reference genomes (<a href="#generateBED">here</a> it is explained how);</li>
 <li><a href="https://github.com/mikessh/migmap">MiGMAP v0.9.7</a> to build a detailed information table (incoroporates IgBlast);</li>
 <li><a href="">Java 1.8</a> is required by MiGMAP;</li>
 <li>[optional] R with <a href="">tcR package</a> to generate plots and summary statistics of the clonotype;</li>

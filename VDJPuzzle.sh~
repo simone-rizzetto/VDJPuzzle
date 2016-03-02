@@ -128,7 +128,11 @@ done
 
 wait
 
+bowtie2-build -f all_sequences_a.fa TCRA
+bowtie2-build -f all_sequences_b.fa TCRB
 
+mkdir assembledTCR_genome
+mv *.bt2 > assembledTCR_genome
 
 #PART3 - 
 for d in $RNADIR/*
@@ -223,7 +227,6 @@ if [ "$RUNR" -ge 1 ]; then
 	rm summary/single_cells_TRB.txt
 	rm summary/single_cells_ID_TRA.txt
 	rm summary/single_cells_ID_TRB.txt
-	Rscript tcr_analysis.R summary/single_cells_TRA.txt summary/single_cells_TRB.txt
 fi
 
 echo "TCR identification completed! Check your results in the summary directory."
