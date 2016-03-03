@@ -2,7 +2,7 @@
 #Source code implemented by Simone Rizzetto (UNSW, Australia), for enquiries and documentation please refer to https://github.com/Simo-88/VDJPuzzle
 
 #CONFIGURE SCRIPT PATHS
-export MIGMAP=/path_to_migmap/migmap-(version).jar
+export MIGMAP=/path/to/migmap/migmap-version.jar
 export trinitypath=Trinity
 export TOPHAT=tophat2
 export BOWTIE=bowtie2
@@ -11,7 +11,7 @@ export JAVA18=java1.8/bin/java #Java18 is included in the package so don't edit 
 #CONFIGURE REFERENCE PATHS
 export TCRA=BED_files/TRA.bed
 export TCRB=BED_files/TRB.bed
-export ENSEMBL=/path_to_ensembl/Bowtie2Index/genome
+export ENSEMBL=/path/to/ensembl/Bowtie2Index/genome
 
 #SET DEFAULT PARAMETERS
 PARALLEL=0
