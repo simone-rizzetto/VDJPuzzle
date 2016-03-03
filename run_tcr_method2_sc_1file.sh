@@ -11,11 +11,6 @@ SUFFIX=P.fastq.gz
 R1=_R1_001
 R2=_R2_001
 
-TCRA=BED_files/TRA.bed
-TCRB=BED_files/TRB.bed
-MIGMAP=/home/simone/Tools/migmap-0.9.7/migmap-0.9.7.jar
-JAVA18=java1.8/bin/java
-
 
 #unzip all files in a dir
 gunzip -f $CELL_PATH/*.fastq.gz

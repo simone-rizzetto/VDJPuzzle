@@ -1,10 +1,8 @@
 #!/bin/bash
-#This script requries tophat2, samtools, intersectBed in /usr/bin/ and Trinity
+#This script requries tophat2, samtools, intersectBed and Trinity in /usr/bin/
 #Execution: ./Method2.sh reads1.fq reads2.fq TCRA_C.bed TCRB_C.bed out_dir
 #Do NOT add / after out_dir when you call Method2.sh
 
-trinitypath=/home/simone/Tools/trinityrnaseq-2.0.6/Trinity
-TOPHAT=tophat2
 
 rm $5/overlapping_reads*
 rm $5/out1b.fastq
@@ -23,7 +21,7 @@ rm $5/out2a.fastq
 
 mkdir $5/out
 
-$TOPHAT -r 210 --mate-std-dev 30 -m 2 --solexa-quals -o $5/out/tophat_run -p 8 /home/simone/scRNA_Seq/Ensembl/Bowtie2Index/genome $1 $2
+$TOPHAT -r 210 --mate-std-dev 30 -m 2 --solexa-quals -o $5/out/tophat_run -p 8 $ENSEMBL $1 $2
 #samtools import /home/simone/scRNA_Seq/Ensembl/Bowtie2Index/genome.fa.fai $5/out/tophat_run/accepted_hits.sam $5/out/tophat_run/accepted_hits.bam
 
 #====== TRB only BEGIN =========

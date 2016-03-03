@@ -1,6 +1,18 @@
 #!/bin/bash
 #Source code implemented by Simone Rizzetto (UNSW, Australia), for enquiries and documentation please refer to https://github.com/Simo-88/VDJPuzzle
 
+#CONFIGURE SCRIPT PATHS
+export MIGMAP=/home/simone/Tools/migmap-0.9.7/migmap-0.9.7.jar
+export trinitypath=Trinity
+export TOPHAT=tophat2
+export BOWTIE=bowtie2
+export JAVA18=java1.8/bin/java #Java18 is included in the package so don't edit this path
+
+#CONFIGURE REFERENCE PATHS
+export TCRA=BED_files/TRA.bed
+export TCRB=BED_files/TRB.bed
+export ENSEMBL=/home/simone/scRNA_Seq/Ensembl/Bowtie2Index/genome
+
 #SET DEFAULT PARAMETERS
 PARALLEL=0
 RUNTCR=1

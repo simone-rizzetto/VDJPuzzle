@@ -6,9 +6,6 @@
 #parameter one need to be the ABSOLUTE path where cell sequences are located WITHOUT /
 CELL_PATH=$1
 
-MIGMAP=/home/simone/Tools/migmap-0.9.7/migmap-0.9.7.jar
-JAVA18=java1.8/bin/java
-
 
 #unzip all files in a dir
 
