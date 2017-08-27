@@ -1,4 +1,6 @@
 <h1>VDJ Puzzle</h1>
+<h2>A new version of VDJPuzzle is available at</h2>
+<a href="https://bitbucket.org/kirbyvisp/vdjpuzzle2">https://bitbucket.org/kirbyvisp/vdjpuzzle2</a><br>
 
 VDJ Puzzle [<a href="#Ref1">1</a>] is a method to build T-Cell Receptor and B-Cell Receptor assembly from single cell RNA sequencing data.
 
